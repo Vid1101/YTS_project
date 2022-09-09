@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Results Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+
+  <div class="table-users">
+   <div class="header">Video Results</div>
+
+   <table cellspacing="0">
+      <tr>
+         <th>Video Title</th>
+         <th>Video URL</th>
+         <th>Likes</th>
+         <th>Comments</th>
+          <th>Commenter Name</th>
+         <th width="250">Comments</th>
+      </tr>
+         {% for result in results %}
+      <tr>
+          <td>{{result['Video Title']}}</td>
+         <td>{{result['Video URL']}}</td>
+         <td>{{result['Likes']}}</td>
+         <td>{{result['Comments']}}</td>
+         <td>{{result['Commenter Name']}} </td>
+          <td>{{result['Comment Added']}}</td>
+       {% endfor %}
+   </table>
+</div>
