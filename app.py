@@ -2,7 +2,7 @@ import time
 import pymongo
 import base64
 import requests
-import pandas as pd
+#import pandas as pd
 from selenium import webdriver
 import mysql.connector as conn
 from flask import Flask, render_template, request,jsonify
